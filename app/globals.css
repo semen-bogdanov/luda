@@ -1,0 +1,212 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: 'RubikRegular';
+	src: url('../app/fonts/Rubik/Rubik-Regular.ttf');
+	src: url('../app/fonts/Rubik/Rubik-Regular.eot') format('embedded-opentype'),
+		url('../app/fonts/Rubik/Rubik-Regular.woff2') format('woff2'),
+		url('../app/fonts/Rubik/Rubik-Regular.woff') format('woff'),
+		url('../app/fonts/Rubik/Rubik-Regular.ttf') format('truetype'),
+		url('../app/fonts/Rubik/Rubik-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Rubik-Light';
+	src: url('../app/fonts/Rubik/Rubik-Light.eot');
+	src: url('../app/fonts/Rubik/Rubik-Light.eot') format('embedded-opentype'),
+		url('../app/fonts/Rubik/Rubik-Light.woff2') format('woff2'),
+		url('../app/fonts/Rubik/Rubik-Light.woff') format('woff'),
+		url('../app/fonts/Rubik/Rubik-Light.ttf') format('truetype'),
+		url('../app/fonts/Rubik/Rubik-Light.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Rubik-Medium';
+	src: url('../app/fonts/Rubik/Rubik-Medium.eot');
+	src: url('../app/fonts/Rubik/Rubik-Medium.eot') format('embedded-opentype'),
+		url('../app/fonts/Rubik/Rubik-Medium.woff2') format('woff2'),
+		url('../app/fonts/Rubik/Rubik-Medium.woff') format('woff'),
+		url('../app/fonts/Rubik/Rubik-Medium.ttf') format('truetype'),
+		url('../app/fonts/Rubik/Rubik-Medium.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Rubik-Bold';
+	src: url('../app/fonts/Rubik/Rubik-Bold.eot');
+	src: url('../app/fonts/Rubik/Rubik-Bold.eot') format('embedded-opentype'),
+		url('../app/fonts/Rubik/Rubik-Bold.woff2') format('woff2'),
+		url('../app/fonts/Rubik/Rubik-Bold.woff') format('woff'),
+		url('../app/fonts/Rubik/Rubik-Bold.ttf') format('truetype'),
+		url('../app/fonts/Rubik/Rubik-Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+* {
+	font-family: 'RubikRegular' !important;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
+:root {
+	--background: #ffffff;
+	--foreground: #171717;
+}
+
+@layer base {
+	:root {
+		--foreground: 20 14.3% 4.1%;
+
+		--card: 0 0% 100%;
+		--card-foreground: 20 14.3% 4.1%;
+
+		--popover: 0 0% 100%;
+		--popover-foreground: 20 14.3% 4.1%;
+
+		--primary: 21 86.7% 58.6%;
+		--primary-foreground: 60 9.1% 97.8%;
+
+		--secondary: 21 99% 60.2%;
+		--secondary-foreground: 24 9.8% 10%;
+
+		--muted: 60 4.8% 95.9%;
+		--muted-foreground: 25 5.3% 44.7%;
+
+		--accent: 60 4.8% 95.9%;
+		--accent-foreground: 24 9.8% 10%;
+
+		--destructive: 0 84.2% 60.2%;
+		--destructive-foreground: 60 9.1% 97.8%;
+
+		--grays: 0 0% 40%;
+		--border: 20 5.9% 90%;
+		--input: 0 0% 90%;
+		--ring: 24.6 95% 53.1%;
+		--radius: 1rem;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background: #0a0a0a;
+		--foreground: #ededed;
+	}
+}
+
+body {
+	color: var(--foreground);
+	background: var(--background);
+	img {
+		position: relative !important;
+	}
+}
+
+.scrollbar::-webkit-scrollbar {
+	width: 4px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+	border-radius: 6px;
+	background: #fff;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+	background: #dbdadd;
+	border-radius: 6px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+	background: #dbdadd;
+}
+
+.slick-dots {
+	position: absolute !important;
+	margin-bottom: -190px !important;
+
+	ul {
+		margin: -5px !important;
+	}
+}
+
+.slick-dots li {
+	width: 30px !important;
+	height: 20px !important;
+	opacity: 1 !important;
+}
+
+.slick-dots li:active {
+	width: 30px !important;
+	height: 20px !important;
+	background-color: white !important;
+	border-radius: 0 !important;
+}
+
+.slick-dots li button {
+	width: 30px !important;
+	height: 20px !important;
+	opacity: 1 !important;
+}
+
+.slick-dots li button:before {
+	content: '' !important;
+	width: 30px !important;
+	height: 20px !important;
+	background-color: white !important;
+	opacity: 0.6;
+}
+
+@media screen and (max-width: 1030px) {
+	.slick-dots {
+		position: absolute !important;
+		margin-bottom: 100px !important;
+
+		ul {
+			margin: -5px !important;
+		}
+	}
+
+	.slick-dots li {
+		opacity: 10 !important;
+	}
+}
+
+@media screen and (min-width: 200px) {
+	.slick-dots {
+		top: 350px !important;
+	}
+}
+
+@media screen and (min-width: 640px) {
+	.slick-dots {
+		top: 610px !important;
+		margin-bottom: 0px !important;
+	}
+}
+
+#nprogress .bar {
+	@apply bg-primary !important;
+}
+
+#nprogress .peg {
+	@apply shadow-md shadow-primary !important;
+}
+
+#nprogress .spinner-icon {
+	@apply border-t-primary border-l-primary !important;
+}
