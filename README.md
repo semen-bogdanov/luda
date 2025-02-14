@@ -20,7 +20,7 @@
 
 - ORM Prisma  
 - База данных Postgresql
-- Typescript (Душевное спокойствие 🙏🏻)
+- Typescript  
 - Multer
 - Bcrypt
  
